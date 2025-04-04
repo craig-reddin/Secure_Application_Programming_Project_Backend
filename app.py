@@ -1,4 +1,4 @@
-# Importing necessary libraries
+# Import libraries
 import sqlite3
 import os
 from flask import Flask, request, jsonify
@@ -193,7 +193,7 @@ def update_student(id):
 
     if student:
         # Updating student details in the database
-        cursor.execute("UPDATE Student SET name = '" + data.get("name", student["name"]) + 
+        cursor.executescript("UPDATE Student SET name = '" + data.get("name", student["name"]) + 
                "', date_of_birth = '" + data.get("date_of_birth", student["date_of_birth"]) + 
                "', student_type = '" + data.get("student_type", student["student_type"]) + 
                "', course_name = '" + data.get("course_name", student["course_name"]) + 
