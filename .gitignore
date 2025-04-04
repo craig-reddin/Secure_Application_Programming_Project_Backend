@@ -3,3 +3,4 @@ privatekey.pem
 server.crt
 openssl.cnf
 .env
+variables.txt
