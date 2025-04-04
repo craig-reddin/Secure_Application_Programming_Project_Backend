@@ -3,3 +3,4 @@ privatekey.pem
 server.crt
 variables.txt
 students.db
+__pycache__
