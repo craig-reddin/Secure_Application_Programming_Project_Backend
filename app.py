@@ -11,7 +11,7 @@ class StudentManagementApp:
         self.__configure_app()
         
     def __configure_app(self):
-        #Configure the Flask application with necessary middleware and settings
+        #Configure the Flask application with necessary middleware and settings 
         # Enable CORS for specific origins
         CORS(self.__app,supports_credentials=True, resources={r"/*": {"origins": ["https://localhost:5173", "https://localhost:5174"]}})
         
