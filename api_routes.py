@@ -20,9 +20,7 @@ class StudentController:
             dictionary = [student.to_dict() for student in students]
             #return JSON dictionary
             return jsonify(dictionary)
-        except Exception as e:
-            #Log the error if one occurs
-            ErrorLog.log_error(str(e), "get_all_students")
+        except Exception:
             #return error message
             return jsonify({"error": "Internal Server Error"}), 500
     

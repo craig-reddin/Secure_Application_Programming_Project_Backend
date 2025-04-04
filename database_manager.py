@@ -130,8 +130,8 @@ class DatabaseManager:
             )
             conn.commit()
             conn.close()
-        except Exception as e:
-            print(f"Error logging failed: {str(e)}")
+        except Exception:
+            print(f"Error logging failed")
         finally:
             if conn:
                 conn.close()

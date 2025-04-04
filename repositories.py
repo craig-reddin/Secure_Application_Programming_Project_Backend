@@ -74,6 +74,7 @@ class StudentRepository:
             )
             
             conn.commit()
+            #return the last row inserted Id
             return cursor.lastrowid
         except sqlite3.IntegrityError as e:
             #Integrity Error if for example an email is trying to be inserted in the database and already exists.
@@ -113,7 +114,6 @@ class StudentRepository:
                     student.get_id()
                 )
             )
-            
             conn.commit()
             return cursor.rowcount > 0
         except Exception as e:
