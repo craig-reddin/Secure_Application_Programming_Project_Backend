@@ -1,0 +1,5 @@
+# Ignore private key and server certificate
+privatekey.pem
+server.crt
+openssl.cnf
+.env

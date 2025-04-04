@@ -64,3 +64,4 @@ class StudentManagementApp:
 if __name__ == "__main__":
     app = StudentManagementApp()
     app.run()
+
