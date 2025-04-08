@@ -40,12 +40,12 @@ def init_db():
     cursor.execute(''' 
         CREATE TABLE Student (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT NOT NULL,
-            date_of_birth TEXT NOT NULL,
-            email TEXT UNIQUE NOT NULL,
-            student_type TEXT NOT NULL,
-            course_name TEXT NOT NULL,
-            course_code TEXT NOT NULL
+            name TEXT,
+            date_of_birth TEXT,
+            email TEXT,
+            student_type TEXT,
+            course_name TEXT,
+            course_code TEXT
         )
     ''')
     conn.commit()
@@ -55,9 +55,9 @@ def init_db():
     cursor.execute(''' 
         CREATE TABLE Admin (
             admin_id INTEGER PRIMARY KEY AUTOINCREMENT,
-            admin_name TEXT NOT NULL,
-            admin_email TEXT UNIQUE NOT NULL,
-            admin_password TEXT NOT NULL
+            admin_name TEXT,
+            admin_email TEXT UNIQUE,
+            admin_password TEXT
         )
     ''')
     conn.commit()
@@ -129,9 +129,16 @@ def add_student():
     conn = get_db_connection()
     cursor = conn.cursor()
 
+    print(data["name"])
+    print(data["date_of_birth"])
+    print(data["email"])
+    print(data["student_type"])
+    print(data["course_name"] )
+    print(data["course_code"])
+
     try:
         # Inserting a new student into the Student table
-        cursor.execute("INSERT INTO Student VALUES ('" 
+        cursor.executescript("INSERT INTO Student VALUES (NULL,'" 
                + data["name"] + "', '" 
                + data["date_of_birth"] + "', '" 
                + data["email"] + "', '" 
