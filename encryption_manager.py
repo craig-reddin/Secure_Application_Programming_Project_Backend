@@ -142,11 +142,9 @@ def verify_jwt(f):
         token = request.headers.get("Authorization")
         
         # Ensure token starts with "Bearer "
-        print(token)
         if token and token.startswith("Bearer "):
             #Remove bearer
             token = token.split(" ")[1] 
-            print(token)
         else:
             return jsonify({"error": "Unauthorised"}), 401
         

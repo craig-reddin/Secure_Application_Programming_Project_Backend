@@ -2,7 +2,7 @@ from functools import wraps
 from flask import Blueprint, request, jsonify, make_response
 from models import ErrorLog, Student
 import sqlite3
-from repositories import StudentRepository, AdminRepository;
+from transactions import StudentRepository, AdminRepository;
 from encryption_manager import EncryptionManager, verify_jwt
 
 class StudentController:
@@ -90,7 +90,7 @@ class StudentController:
     def delete_student(self, student_id):
         #API endpoint to delete a student
         try:
-            # Check if student exists
+            # Check if student exists before deleting student
             existing_student = self.__student_repository.get_student_by_id(student_id)
             
             if not existing_student:
@@ -129,7 +129,6 @@ class AuthController:
             token = em.generate_jwt(email)
             response = make_response(jsonify({"message": "Admin logged in successfully","token": token}))
             response.set_cookie("jwt", token, httponly=True, secure=True, samesite="Strict")
-            print(token)
             return response
         except Exception as e:
             print(e)
