@@ -1,6 +1,7 @@
 Student Management System
 
 A secure web application for managing student records with Flask backend, SQLite Database.
+
 Features
 
     •	Student record management (create, read, update, delete)
@@ -14,7 +15,7 @@ Features
     •	Error logging
 
     •	HTTPS/ SSL 
-    
+
     •	Security protections (CORS, Content Security Policy)
 
 Requirements
