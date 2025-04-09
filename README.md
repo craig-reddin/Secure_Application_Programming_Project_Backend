@@ -4,11 +4,17 @@ A secure web application for managing student records with Flask backend, SQLite
 Features
 
     •	Student record management (create, read, update, delete)
+
     •	Secure admin authentication
+
     •	Encrypted database storage
+
     •	JWT token-based API authorisation
+
     •	Error logging
+
     •	HTTPS/ SSL 
+    
     •	Security protections (CORS, Content Security Policy)
 
 Requirements
