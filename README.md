@@ -4,21 +4,21 @@ A basic web application for managing students, built with Flask and SQLite.
 
 Features
 
-•	Student record management (create, read, update, delete)
+    •	Student record management (create, read, update, delete)
 
-•	Admin login endpoint (without authentication)
+    •	Admin login endpoint (without authentication)
 
-•	SQLite database storage
+    •	SQLite database storage
 
-•	RESTful API endpoint
+    •	RESTful API endpoint
 
-•	Cross-Origin Resource Sharing (CORS) support
+    •	Cross-Origin Resource Sharing (CORS) support
 
 Requirements
 
-•	Python 3.7 or higher
+    •	Python 3.7 or higher
 
-•	pip (Python package installer)
+    •	pip (Python package installer)
 
 
 Setup Instructions
