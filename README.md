@@ -1,4 +1,5 @@
 Student Management System
+
 A secure web application for managing student records with Flask backend, SQLite Database.
 Features
 
@@ -72,30 +73,29 @@ For production use, you would need to:
     4.	Other unforeseen security precautions
 
 Troubleshooting
-    •	Browser Security Warnings: Since the application uses a self-signed certificate, browsers may show security warnings when using Chrome. 
-If issues occur communicating from the frontend to backend, follow the below steps:
-    a.	Open the Run dialog (Win + R) and type mmc, then press Enter.
-    b.	In the Microsoft Management Console (MMC), go to File then click Add/Remove Snap-in.
-    c.	Select Certificates and click Add.
-    d.	Choose Computer account and click Next, then select Local Computer and click Ok.
-    e.	Press Win + R, type certmgr.msc, and press Enter to open the Certificate Manager.
-    f.	Navigate to Trusted Root Certification Authorities > Certificates.
-    g.	Right-click on Certificates, select All Tasks > Import.
-    h.	Import your Cert.
-    i.	Go to chrome
-    j.	Click on 3 dots, top right corner.
-    k.	Click on settings, got to privacy and security
-    l.	Click Security
-    m.	Click manage certificates
-    n.	Ensure “Use imported local certificates from your operating system” is toggled on.
-    o.	Click “Manage imported certificates from Windows”
+    1.	Browser Security Warnings: Since the application uses a self-signed certificate, browsers may show security warnings when using Chrome. 
+        If issues occur communicating from the frontend to backend, follow the below steps:
+        a.	Open the Run dialog (Win + R) and type mmc, then press Enter.
+        b.	In the Microsoft Management Console (MMC), go to File then click Add/Remove Snap-in.
+        c.	Select Certificates and click Add.
+        d.	Choose Computer account and click Next, then select Local Computer and click Ok.
+        e.	Press Win + R, type certmgr.msc, and press Enter to open the Certificate Manager.
+        f.	Navigate to Trusted Root Certification Authorities > Certificates.
+        g.	Right-click on Certificates, select All Tasks > Import.
+        h.	Import your Cert.
+        i.	Go to chrome
+        j.	Click on 3 dots, top right corner.
+        k.	Click on settings, got to privacy and security
+        l.	Click Security
+        m.	Click manage certificates
+        n.	Ensure “Use imported local certificates from your operating system” is toggled on.
+        o.	Click “Manage imported certificates from Windows”
 
 
-    •	CORS Issues: If connecting from a frontend with a different origin, update the CORS configuration.
-    •	Database Reset: If you need to reset the database, restart the application.
-    •	SSL Certificate Issues: Make sure the generated SSL certificate files (server.crt and privatekey.pem) are in the same directory as app.py.
-    •	JWT Authentication Problems: If receiving "Unauthorised" errors, ensure the JWT token is valid and properly formatted in the “Authorization header”.
-    
+    2.	CORS Issues: If connecting from a frontend with a different origin, update the CORS configuration.
+    3.	Database Reset: If you need to reset the database, restart the application.
+    4.	SSL Certificate Issues: Make sure the generated SSL certificate files (server.crt and privatekey.pem) are in the same directory as app.py.
+
 Project Structure
     •	app.py: Main application entry point
     •	api_routes.py: API endpoints
