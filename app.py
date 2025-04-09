@@ -18,7 +18,7 @@ class StudentManagementApp:
         # Set up Content Security Policy
         self.__app.after_request(self.__set_csp)
         
-        # Initialise variable encryption and database 
+        # Initialise object encryption and database 
         encryption_managers = EncryptionManager()
         encryption_managers.initialise_encrypted_storage()
         
